@@ -3,7 +3,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc It Off!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <ui-view></ui-view>
@@ -18,21 +20,24 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
 
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBNAFVyR8HeqmFaVRdst4_a1FH13f6N7YY",
-        authDomain: "bloc-it-off-3d0b3.firebaseapp.com",
-        databaseURL: "https://bloc-it-off-3d0b3.firebaseio.com",
-        projectId: "bloc-it-off-3d0b3",
-        storageBucket: "",
-        messagingSenderId: "23813478058"
-      };
-      firebase.initializeApp(config);
-    </script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBNAFVyR8HeqmFaVRdst4_a1FH13f6N7YY",
+    authDomain: "bloc-it-off-3d0b3.firebaseapp.com",
+    databaseURL: "https://bloc-it-off-3d0b3.firebaseio.com",
+    projectId: "bloc-it-off-3d0b3",
+    storageBucket: "bloc-it-off-3d0b3.appspot.com",
+    messagingSenderId: "23813478058"
+  };
+  firebase.initializeApp(config);
+</script>
 
 
     <!-- Application Files -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/services/task.js"></script>
 </body>
 </html>
