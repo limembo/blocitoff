@@ -1,25 +1,26 @@
 <section class="hero-content">
-  <h1 class="hero-title">Active Tasks</h1>
+  <h1 class="hero-title">Archive</h1>
 </section>
 
 <section class="new-task">
   <div class="new-task-header">
     <p>Task Name</p>
   </div>
-  <form class="new-task-field" ng-submit="home.addTask()">
+  <div class="new-task-field" ng-submit="home.addTask()">
     <input type="text" class="task-field" ng-model="home.task.title" name="title">
     <input type="submit" class="submit" value="Add Task">
-  </form>
+  </div>
 </section>
 
 <section class="task-content">
-  <div class="task-list" ng-repeat="task in home.tasks">
-    <div ng-hide="home.hide(task)">
+  <div class="task-list" ng-repeat="task in archive.tasks">
+    <div ng-hide="archive.show(task)">
       <div>
         <input class="task-checkbox" type="checkbox">
-        <h3 class="task-title">{{ task.title }}</h3>
+        <h3 class="archive-title">{{ task.title }}</h3>
       </div>
-      <p>Created: {{ task.created }} </p>
+      <p>Created: {{ task.created }}</p>
     </div>
   </div>
+
 </section>

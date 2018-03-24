@@ -11,8 +11,14 @@
                  url: '/',
                  controller: 'HomeCtrl as home',
                  templateUrl: '/templates/home.html'
-             });
-     }
+             })
+
+             .state('archive', {
+                url: '/archive',
+                controller: 'ArchiveCtrl as archive',
+                templateUrl: '/templates/archive.html'
+              });
+          }
 
      angular
          .module('blocitoff', ['ui.router', 'firebase'])

@@ -46,3 +46,7 @@ body {
   border-top: 1px solid #ccc;
   padding-top: 5px;
 }
+
+.archive-title {
+ text-decoration: line-through;
+}
