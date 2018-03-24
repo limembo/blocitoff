@@ -1,15 +1,17 @@
 <section class="hero-content">
-  <h1 class="hero-title">Active Tasks</h1>
+  <h1 class="hero-title">Tasks</h1>
 </section>
 
 <section class="new-task">
-  <div class="new-task-header">
-    <p>Task Name</p>
+  <div class="new-task-field">
+    <input type="text" class="task-field" ng-model="messageTitle" placeholder="Name your new task">
+    <select class="priority" ng-model="taskPriority">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low" >Low</option>
+    </select>
+    <button class="submit" ng-click="home.addTask(messageTitle, taskPriority); clearfunction(this)">Add Task</button>
   </div>
-  <form class="new-task-field" ng-submit="home.addTask()">
-    <input type="text" class="task-field" ng-model="home.task.title" name="title">
-    <input type="submit" class="submit" value="Add Task">
-  </form>
 </section>
 
 <section class="task-content">
@@ -19,7 +21,7 @@
         <input class="task-checkbox" type="checkbox">
         <h3 class="task-title">{{ task.title }}</h3>
       </div>
-      <p>Created: {{ task.created }} </p>
+      <p class="task-priority">Priority: {{ task.priority }} | Created: {{ task.created }}</p>
     </div>
   </div>
 </section>

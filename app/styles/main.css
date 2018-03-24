@@ -50,3 +50,8 @@ body {
 .archive-title {
  text-decoration: line-through;
 }
+
+.priority {
+  margin: 0 1rem 0 0;
+  height: 1.75rem;
+}
