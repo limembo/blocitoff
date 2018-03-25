@@ -21,7 +21,7 @@
       }
       $scope.clearfunction = function(event){
         event.messageTitle = null;
-        event.taskPriority = "3";
+        event.taskPriority = "Low";
       }
     }
 
